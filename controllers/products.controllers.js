@@ -9,7 +9,7 @@ exports.create =  async(req, res) =>{
   .then(()=>{
     return res.json({
       erro: false,
-      mensagem: 'Categoria inserida com sucesso!'
+      mensagem: 'produto inserido com sucesso!'
     });
   }).catch((err)=>{
     return res.status(400).json({
@@ -22,7 +22,7 @@ exports.create =  async(req, res) =>{
 ////////mostrar todos //////////
 exports.findAll = async(req,res)=>{
   await Products.findAll({
-    attributes: ['id','name','description'],
+    attributes: ['id','name','description','quantity','price'],
     order: [['id', 'ASC']]
 
   })
