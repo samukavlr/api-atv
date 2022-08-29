@@ -26,14 +26,15 @@ const Products = db.define('Products', {
         type: Sequelize.DECIMAL(15,2),
         allowNull: false,
     }
+ 
 })
 
-Products.belongsTo(Categories, {
-    constraint: true,
-    foreignKey: 'categorieId',
-    onDelete:'RESTRICT',
-    onUpdate:'CASCADE'
-})
+// Products.belongsTo(Categories, {
+//     constraint: true,
+//     foreignKey: 'categorieId',
+//     onDelete:'RESTRICT',
+//     onUpdate:'CASCADE'
+// })
 
 
 
